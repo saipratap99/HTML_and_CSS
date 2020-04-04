@@ -4,18 +4,22 @@ body{
 .cafeteria-navbar{
   display: flex;
   align-items: center;
-  background-color: #fb5c2cf3;
   border-radius: 10px;
   max-width: 99%;
   margin: 0 auto;
-  box-shadow: 3px 3px 5px #0d0f11;
+  box-shadow: 0px 0px 5px #0d0f11;
 }
 .cafeteria-navbarHeading{
   margin: 5px;
   padding: 5px;
-  color: rgb(245, 239, 239);
+  color: rgba(34, 33, 33, 0.877);
   font-weight: bold;
   font-family: sans-serif;
+  display: flex;
+  align-items: center;
+}
+.cafeteria-navbarHeading img{
+  padding: 5px;
 }
 .cafeteria-navbarAllButtons{
   display: flex;
@@ -29,22 +33,60 @@ body{
 }
 .cafeteria-navbarButton > a{
   text-decoration: none;
-  color: rgb(43, 0, 0);
-  color: rgb(245, 239, 239);
+  color: rgba(24, 23, 23, 0.842);
   font-family: sans-serif;
   margin-right: 5px;
   text-align: center;
   padding: 5px;
-
+}
+.cafeteria-navbarButton > a:hover{
+  color: rgba(255, 68, 0, 0.904);
 }
 
 
 
 
-.menu-menuItems{
+
+
+.search-box{
+  display: flex;
+  align-items: center;
   max-width: 75%;
+  margin: 5px auto;
+  padding: 5px;
+}
+.search-box > form{
+  margin: 0 auto;
+}
+.search-box > form input{
+  font-size: 23px;
+  margin: 5px;
+  padding: 5px;
+  box-shadow: 0px 0px 5px #0d0f11;
+  border: 0px;
+  text-align: center;
+}
+.search-box > form input[type="submit"]{
+  background-color: #48BB78;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding:5px 10px ;
+  color: white;
+}
+.search-box > form input[type="search"]{
+  background-color: white;
+  border-radius: 5px;
+}
+
+
+
+
+
+.menu-menuItems{
+  width: 75%;
   margin: 0 auto;
   display: flex;
+  font-family: sans-serif;
 }
 .cafeteria-menu{
   margin: 5px;
@@ -71,7 +113,6 @@ body{
   display: flex;
   align-items: center;
   font-family: sans-serif;
-
 }
 .menuItems-list{
   border-bottom: 3px solid black;
@@ -88,7 +129,7 @@ body{
  .orderItem-add{
    margin-left: auto;
    border: 1px solid transparent;
-   background-color: rgb(145, 49, 255);
+   background-color: rgba(255, 68, 0, 0.904);
    color: white;
    margin-right: 5px;
   }
