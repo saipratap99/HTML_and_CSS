@@ -8,6 +8,16 @@
   <link rel="stylesheet" type="text/css" href="cm-app.css">
   <link rel="stylesheet" type="text/css" href="reset.css">
   <link rel="stylesheet" type="text/css" href="typography.css">
+  <script>
+    function displayForm() {
+      var x = document.getElementById("addItem-form");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+  </script>
 </head>
 
 <body>
@@ -25,20 +35,35 @@
     <form>
       <input type="search" placeholder="Search for item">
       <input type="submit" value="Seach Item">
-      <input type="submit" value="Add Item">
+      <input type="button" onclick=displayForm() value="Add Item">
+    </form>
+  </div>
+  <div class="addItem-form" id="addItem-form">
+    <form>
+      <input type="text" placeholder="Item name">
+      <input type="number" placeholder="Price"><br>
+      <input type="text" placeholder="Description of item">
+      <select id="cars" name="cars">
+        <option value="Breakfast">Biryani</option>
+        <option value="Biryani">South Indian</option>
+        <option value="Desserts">Desserts</option>
+        <option value="Ice Cream">Ice Cream</option>
+      </select>
+      <br>
+      <input type="submit" onclick=displayForm() placeholder="Add Item">
     </form>
   </div>
   <div class="menu-menuItems">
     <div class="cafeteria-menu">
       <ul>
-        <li class="menu"><a href="#">South Indian</a></li>
-        <li class="menu"><a href="#">Biryani's</a></li>
-        <li class="menu"><a href="#">Deserts</a></li>
+        <li class="menu"><a href="#south indian">South Indian</a></li>
+        <li class="menu"><a href="#biryani's">Biryani's</a></li>
+        <li class="menu"><a href="#desserts">Deserts</a></li>
       </ul>
     </div>
     <div class="cafeteria-menuItems">
       <ul class="menuItems-list">
-        <h3 class="menuName">South Indian</h3>
+        <h3 class="menuName" id="south indian">South Indian</h3>
         <li class="menuItem">
           <p>
             Idly
@@ -69,7 +94,7 @@
       </ul>
 
       <ul class="menuItems-list">
-        <h3 class="menuName">Biryani's</h3>
+        <h3 class="menuName" id="biryani's">Biryani's</h3>
         <li class="menuItem">
           <p>
             Egg Biryani
@@ -99,8 +124,9 @@
         </li>
       </ul>
 
+
       <ul class="menuItems-list">
-        <h3 class="menuName">Deserts</h3>
+        <h3 class="menuName" id="desserts">Desserts</h3>
         <li class="menuItem">
           <p>
             Gulab jamun

@@ -51,9 +51,11 @@ body{
 .search-box{
   display: flex;
   align-items: center;
-  max-width: 75%;
+  max-width: 70%;
   margin: 5px auto;
   padding: 5px;
+  background-color: orangered;
+  border-radius: 10px;
 }
 .search-box > form{
   margin: 0 auto;
@@ -62,12 +64,11 @@ body{
   font-size: 23px;
   margin: 5px;
   padding: 5px;
-  box-shadow: 0px 0px 5px #0d0f11;
   border: 0px;
   text-align: center;
 }
-.search-box > form input[type="submit"]{
-  background-color: #48BB78;
+.search-box > form input[type="submit"],input[type="button"]{
+  background-color: rgba(21, 196, 64, 0.932);
   border: 1px solid transparent;
   border-radius: 5px;
   padding:5px 10px ;
@@ -80,15 +81,26 @@ body{
 
 
 
+.addItem-form{
+  width: 70%;
+  margin: 5px auto;
+  display: none;
+}
+.addItem-form form > input{
+  margin: 0 auto;
+}
+
+
 
 
 .menu-menuItems{
-  width: 75%;
+  max-width: 70%;
   margin: 0 auto;
   display: flex;
   font-family: sans-serif;
 }
 .cafeteria-menu{
+  width: 25%;
   margin: 5px;
   border-right: 2px dotted rgba(197, 194, 194, 0.966);
 }
@@ -102,6 +114,7 @@ body{
 .menu{
   margin: 5px;
   padding: 5px;
+  text-align: right;
 
 }
 .menuItem {
@@ -114,9 +127,12 @@ body{
   align-items: center;
   font-family: sans-serif;
 }
+.cafeteria-menuItems{
+  width: 75%;
+  margin: 0 auto;
+}
 .menuItems-list{
   border-bottom: 3px solid black;
-  width: 600px;
 }
 .menuItem > p{
   padding: 5px;
@@ -137,7 +153,7 @@ body{
    display: block;
    padding: 5px;
    margin: 5px;
-   font-size: 16px;
+   font-size: 18px;
    color: rgb(92, 91, 91);
  }
  .orderItem-add > a{
